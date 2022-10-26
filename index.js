@@ -1,7 +1,7 @@
 require("dotenv").config()
 const express = require("express");
 const cors = require("cors")
-const router = require("./routes/routes");
+const router = require("./services/routes");
 
 const { connectDB } = require("./db/db")
 
@@ -12,7 +12,7 @@ app.use(cors())
 app.use(express.json())
 
 //routes
-app.use(router)
+app.use("/api/v1/companies",router)
 
 const conectdb = async () => {
     try {
