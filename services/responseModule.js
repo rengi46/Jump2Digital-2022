@@ -1,6 +1,5 @@
 //respuestas predeteminadas para enviar al endpoint
 
-
 exports.success=(req,res,message,status)=>{
     res.status(status|| 200).send({
         error:"",

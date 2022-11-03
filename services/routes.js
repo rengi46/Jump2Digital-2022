@@ -1,6 +1,6 @@
 const express = require("express")
 
-const { getCompanysSortSize } = require("../controller/companysController")
+const { getCompanysSortSize,getCompanysSortFounded,infoCompanies } = require("../controller/companysController")
 
 const router = express.Router()
 
@@ -9,6 +9,10 @@ router
     .get(getCompanysSortSize)
 router
     .route("/foundation")
-    .get(getCompanysSortSize)
+    .get(getCompanysSortFounded)
+
+router
+    .route("/info")
+    .get(infoCompanies)
 
 module.exports = router;
