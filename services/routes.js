@@ -10,7 +10,6 @@ router
 router
     .route("/foundation")
     .get(getCompanysSortFounded)
-
 router
     .route("/info")
     .get(infoCompanies)

@@ -6,6 +6,10 @@ const router = require("./services/routes");
 const { connectDB } = require("./db/db")
 
 var app = express();
+(async () => {
+        await connectDB(process.env.MONGO_URI)
+        // console.log("base de datos conectada");
+})();
 
 //middlewares
 app.use(cors())
@@ -14,14 +18,7 @@ app.use(express.json())
 //routes
 app.use("/api/v1/companies",router)
 
-const conectdb = async () => {
-    try {
-        await connectDB(process.env.MONGO_URI)
-        app.listen(5000, () => console.log(`Listening to port 5000`))
-    }
-    catch{
-        console.log("base de datos no conectada");
-    }
-}
+const server = app.listen(5000, () => console.log(`Listening to port 5000`))
 
-conectdb()
+
+module.exports = {app,server}
