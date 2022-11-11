@@ -8,7 +8,7 @@ const { connectDB } = require("./db/db")
 var app = express();
 (async () => {
         await connectDB(process.env.MONGO_URI)
-        // console.log("base de datos conectada");
+        console.log("base de datos conectada");
 })();
 
 //middlewares

@@ -22,6 +22,9 @@ npm install
 Crea un archivo .env
 Crea una base de datos con mongo db
 Pega el archivo de companies.json situado en assets
+Crea una variable con el nombre MONGO_URI en el archivo .env
+pegas la variable de mongoDB parecida a esta
+"mongodb+srv://{user}:{Contraseña}@cluster0.cn7fw.mongodb.net/{nombre base de datos}"
 ```
 
 iniciar proyecto
